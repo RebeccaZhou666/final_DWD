@@ -7,6 +7,7 @@ See video demo is here.
 # About
 It's a dashboard that allows users to monitor the current coronavirus situation and also provide a fun place for people to see the impact of "social distancing" on the spread of coronavirus. <br /><br />
 It really helps to flatten the curve of coronavirus spread by simply <strong>staying HOME</strong>.<br />
+![Flattening the Curve](pictures/science.gif)
 <br />Data source from [1point3acres](https://coronavirus.1point3acres.com/en).
 
 # Prerequisites & Installation
