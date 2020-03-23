@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Fighting against Coronavirus</title>
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+  <script src="https://cdn.staticfile.org/echarts/4.6.0/echarts.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.10.2/addons/p5.sound.min.js"></script>
+  <script src="lib/decomp.js" type="text/javascript"></script>
+  <script src="lib/matter.js" type="text/javascript"></script>
+  <script src="lib/pathseg.js" type="text/javascript"></script>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e77d608bc626219468b01b6" type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</head>
+<body>
+  <div class="section">
+    <div class="title">
+      <h1 class="heading">Fighting against Coronavirus</h1>
+      <p class="date">...</p>
+    </div>
+    <div class="curve-area">
+      <div class="text-wrapper">
+        <h2 class="heading-2">Flattening the Curve</h2>
+        <p class="intro">Slowing the spread of COVID-19 by implementing “social distancing” guidelines. <br>It’s time to save America simply by <strong>staying home</strong>.</p>
+      </div>
+      <div class="img-wrapper"><img src="images/pic.png" srcset="images/pic.png 500w, images/pic.png 2000w, images/pic.png 2600w, images/pic.png 2793w" sizes="(max-width: 479px) 23vw, (max-width: 767px) 25vw, (max-width: 991px) 26vw, 29vw" alt="" class="image"></div>
+    </div>
+    <div class="main-block">
+      <div class="tabs">
+        <!-- <ul id="tab-menu"class="tabs-menu tab-menu">
+          <li><a data-toggle="tab" id="Tab 1-link" href="#Tab-1" class="tab-link-tab-1 inline-block tab-link"  >
+            Flatten the Curve</a></li>
+          <li><a data-toggle="tab" id="Tab 2-link" href="#Tab-2" class="tab-link-tab-2 inline-block tab-link current" >Current Coronavirus Cases
+          </a></li>
+        <ul> -->
+          <!-- onclick="switchTab(event, 'Tab-2')" -->
+          <div id="tab-menu"class="tabs-menu tab-menu">
+            <div><a data-toggle="tab" id="Tab-1-link" href="#Tab-1" class="tab-link-tab-1 inline-block tab-link" onclick="switchTab(event, '#Tab-1')" >
+              Flatten the Curve</a></div>
+            <div><a data-toggle="tab" id="Tab-2-link" href="#Tab-2" class="tab-link-tab-2 inline-block tab-link current" onclick="switchTab(event, '#Tab-2')">Current Coronavirus Cases
+            </a></div>
+          </div>
+        <div class="tab-content">
+          <div id="Tab-1" class="tab-pane-tab-1 tab-pane" >
+            <div class="layout-grid grid-2">
+              <div id="people-block" class="panel-block">
+                <h4 class="heading-3">Staying Home</h4>
+                <div class="number-wrapper">
+                  <div class="data-wrapper">
+                    <h4 class="heading-4 highlight" id="staying">...</h4>
+                    <p class="people">People Staying Home</p>
+                  </div>
+                  <div class="data-wrapper">
+                    <h4 class="heading-4" id="people">0</h4>
+                    <p class="people">Total</p>
+                  </div>
+                </div>
+              </div>
+              <div id="survey-block" class="panel-block">
+                <h4 class="heading-3">Staying Home Survey</h4>
+                <div class="form">
+                  <form id="question" name="question" data-name="question">
+                    <label for="name" class="field-label">Did you stay home all the time today?</label>
+                     <p><input type="radio" name="yes_no" class="radio-input" checked>Yes</input></p>
+                      <p>
+                      <input type="radio" name="yes_no" class="radio-input">No</input>
+                      </p>
+                    <div class="button-block"><a href="#" class="button" id="submit">Submit</a></div>
+                  </form>
+                </div>
+              </div>
+              <div id="curve-block" class="curve-simulation panel-block">
+              </div>
+            </div>
+          </div>
+          <div id="Tab-2" class="tab-pane-tab-2 tab-pane  tab-active">
+            <div class="layout-grid grid-2">
+              <div id="stat-block" class="panel-block">
+                <h4 class="heading-3">United States - Coronavirus</h4>
+                <div class="number-wrapper">
+                  <div class="data-wrapper">
+                    <h4 class="heading-4 highlight" id="confirmed">750</h4>
+                    <p class="people" >Confirmed</p>
+                  </div>
+                  <div class="data-wrapper">
+                    <h4 class="heading-4 recovered" id="recovered">90</h4>
+                    <p class="people" >Recovered</p>
+                  </div>
+                  <div class="data-wrapper">
+                    <h4 class="heading-4" id="death">90</h4>
+                    <p class="people">Death</p>
+                  </div>
+                </div>
+              </div>
+              <div id="figure-block" class="curve-simulation figure">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <canvas id="myCanvas"></canvas>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-text">
+        <p class="paragraph">Designed, Programmed by <a href="https://www.rebeccazhou.net/" target="_blank" class="link">Rebecca Zhou</a></p></div>
+      <div class="footer-text">
+        <p class="paragraph">Final Project for <a href="https://github.com/itp-dwd/2020-spring" target="_blank" class="link">DWD-2020@ ITP, NYU</a></p></div>
+    </div>
+  </div>
+
+  <!-- <script src="js/sketch_test.js" type="text/javascript"></script> -->
+  <script src="js/basic.js" type="text/javascript"></script>
+  <script src="js/charts.js" type="text/javascript"></script>
+  <script src="js/curve.js" type="text/javascript"></script>
+  <script>
+    // let anchor;
+    function switchTab(evt, tab) {
+    var i, tabcontent, tablinks;
+    console.log(evt)
+    location.hash = evt.target.getAttribute("href");
+
+    tabcontent = document.getElementsByClassName("tab-pane");
+    for (i = 0; i < tabcontent.length; i++) {
+      // tabcontent[i].style.display = "none";
+      tabcontent[i].className = tabcontent[i].className.replace(" tab-active", "");
+    }
+    
+    tablinks = document.getElementsByClassName("tab-link");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" current", "");
+    }
+    $(tab).addClass(" tab-active");
+    evt.currentTarget.className += " current";
+}
+
+// function changeTab(tab) {
+
+//     tabcontent = document.getElementsByClassName("tab-pane");
+//     for (i = 0; i < tabcontent.length; i++) {
+//       // tabcontent[i].style.display = "none";
+//       tabcontent[i].className = tabcontent[i].className.replace(" tab-active", "");
+//     }
+    
+//     tablinks = document.getElementsByClassName("tab-link");
+//     for (i = 0; i < tablinks.length; i++) {
+//       tablinks[i].className = tablinks[i].className.replace(" current", "");
+//     }
+//     $(tab).addClass(" tab-active");
+//     $("a[href='" + anchor + "']").addClass(" current");
+// }
+
+// $(document).ready(function(){
+//   $(window).onload("popstate", function() {
+//     console.log("reload")
+//       anchor = location.hash || $("a[data-toggle='tab']").first().attr("href");
+//       changeTab(anchor)
+//     });
+// })
+  
+  </script>
+</body>
+</html>
