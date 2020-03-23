@@ -2,7 +2,7 @@
 
 Real-time Coronavirus data dashboard & Live demo of how "socila distancing" flattens the curve. [Live Website](https://rebeccazhou666-final-dwd.glitch.me/) clicks here.
 See video demo is here.
-[![Watch the video](pictures/design2.png)](https://youtu.be/Xd_BGfLHVj8)
+[![Watch the video](pictures/design2.png)](https://youtu.be/zoda7irByXw)
 
 # About
 It's a dashboard that allows users to monitor the current coronavirus situation and also provide a fun place for people to see the impact of "social distancing" on the spread of coronavirus. <br /><br />
@@ -31,13 +31,13 @@ npm install webpack // solve rendering problems for Matter.js on server.js
 
 # Design
 The sketch is as below.
-![sketch of website](pictures/sketch.jpg)
+![sketch of website](pictures/sketch.png)
 <br />
 To prove the feasibility of demo part. I spent an afternoon, trying to find the right tool to draw the interactive curve-flattening demo. I searched online starting from Dan Shiffman's "The Coding Train" and got inspired by his intro to <strong>Matter.js</strong> and dug further.
-The reason that I used the original engine and render in Matter.js instead of combining [p5.js](https://p5js.org/) is that the coordination system between Matter.js and p5.js is different. p5.js used top-left as starting point while Matter.js used center, which made rendering calculation more complex, especially for irregular shapes and curves. <br /><br />
+The reason that I used the original engine and render in Matter.js instead of combining [p5.js](https://p5js.org/) is that the coordination system between Matter.js and p5.js is different. p5.js used top-left as starting point while Matter.js used center, which made rendering calculation more complex, especially for irregular shapes and curves. 
 Only when I saw the demo worked can I make sure that this feasibility was positive.
-[![Feasibility demo](pictures/demo.png)](https://youtu.be/Xd_BGfLHVj8)
-
+[![Feasibility demo](pictures/demo.png)](https://youtu.be/ogpHUZeYagM)
+<br /><br />
 Then I designed hi-fi sketch.
 ![color palette](pictures/color.png)
 ![design1](pictures/design1.png)
