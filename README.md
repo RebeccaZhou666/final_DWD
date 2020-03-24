@@ -2,7 +2,7 @@
 
 Real-time Coronavirus data dashboard & Live demo of how "socila distancing" flattens the curve. [Live Website](https://rebeccazhou666-final-dwd.glitch.me/) clicks here.
 See video demo is here.
-[![Watch the video](pictures/design2.png)](https://youtu.be/zoda7irByXw)
+[![Watch the video](pictures/design2.png)](https://youtu.be/8oRWh-_MYLE)
 
 # About
 It's a dashboard that allows users to monitor the current coronavirus situation and also provide a fun place for people to see the impact of "social distancing" on the spread of coronavirus. <br /><br />
