@@ -84,6 +84,10 @@ function scheduleCronstyle(){
 }
 scheduleCronstyle();
 ~~~
+
+<h3>About 403 Forbidden</strong></h3>
+I was blocked after my website was deployed a few hours later due to the 403 error.
+
 <h3>About Data Visulization</strong></h3>
 
 I used ECharts.js as the tool of data visualization. One thing that need to point out is that the Echarts.js cannot load in a `display:none` element because it is loaded as the page loaded and it won't change its size till next reload. So I had to put the coronavirus data page at the default tab. 
