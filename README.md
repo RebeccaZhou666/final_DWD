@@ -1,7 +1,7 @@
 # Fighting against Coronavirus
 
 Real-time Coronavirus data dashboard & Live demo of how "socila distancing" flattens the curve. [Live Website](https://rebeccazhou666-final-dwd.glitch.me/) clicks here (still debugging the 403 problem).
-See video demo is here.
+See the video demo below (click the picture).
 [![Watch the video](pictures/design2.png)](https://youtu.be/8oRWh-_MYLE)
 
 # About
